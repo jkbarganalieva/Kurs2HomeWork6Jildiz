@@ -8,9 +8,6 @@
     tools:context=".MainActivity">
 
 
-
-
-
     <TextView
         android:id="@+id/log"
         android:layout_width="wrap_content"
@@ -83,10 +80,10 @@
 
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
-        android:backgroundTint="@color/white"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@drawable/edit_text"
+        android:backgroundTint="@color/white"
         android:hint="Введите вашу почту"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -97,10 +94,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/white"
         android:background="@drawable/edit_text"
-        android:inputType="textPassword"
+        android:backgroundTint="@color/white"
         android:hint="Введите пароль"
+        android:inputType="textPassword"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/big_button" />
@@ -111,15 +108,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:paddingVertical="8dp"
-        android:background="@drawable/edit_text"
         android:text="Войти"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="28sp"
-        app:backgroundTint="@color/gray"
         app:cornerRadius="12dp"
+        android:backgroundTint="@color/gray"
         app:layout_constraintBottom_toTopOf="@id/text_view_4" />
     <!--app:backgroundTint="@color/red"-->
 
+    <!--app:backgroundTint="#4C4A4C"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

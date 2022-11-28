@@ -1,6 +1,7 @@
 package com.geektech.kurs2homework6jildiz;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -50,23 +51,48 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void beforeTextChanged(CharSequence s,int start, int count, int after) {
 
+
            }
-
-
-
-
+           @SuppressLint("MissingInflatedId")
            @Override
            public void onTextChanged(CharSequence s,int start, int count, int after) {
 
-               if (!s.toString().isEmpty() || !password.getText().toString().isEmpty()){
-                   button.setBackgroundColor(Color.parseColor("#4C4A4C"));
+               if (gMail.getText().toString().isEmpty()){
+                   button.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.gray));
                }else {
-                   button.setBackgroundColor(Color.parseColor("#F65B00"));
+                   button.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.orange));
                }
+
+//               if (!s.toString().isEmpty() || !password.getText().toString().isEmpty()){
+//                   button.setBackgroundColor(Color.parseColor("#4C4A4C"));
+//               }else {
+//                   button.setBackgroundColor(Color.parseColor("#F65B00"));
+//               }
+
            }
 
            @Override
            public void afterTextChanged(Editable s) {
+
+           }
+       });
+       password.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+               if (password.getText().toString().isEmpty()){
+                   button.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.gray));
+               }else {
+                   button.setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.orange));
+               }
+           }
+
+           @Override
+           public void afterTextChanged(Editable editable) {
 
            }
        });
